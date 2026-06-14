@@ -46,7 +46,7 @@ export default function HomePage() {
           <span className="brand-mark">RC</span>
           <span>
             <strong>RepasseCheck</strong>
-            <small>conciliação inteligente</small>
+            <small>conciliação inteligente e segura</small>
           </span>
         </Link>
         <div className="landing-actions">
