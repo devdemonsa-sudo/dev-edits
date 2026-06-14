@@ -27,6 +27,16 @@
         </div>
 
         <div class="side-section">
+          <p class="section-label">Navegação</p>
+          <div class="nav-list" id="navList">
+            <button class="nav-item active" data-section="overview">Visão geral</button>
+            <button class="nav-item" data-section="config">Config Manager</button>
+            <button class="nav-item" data-section="sites">Sites Manager</button>
+            <button class="nav-item" data-section="history">History</button>
+          </div>
+        </div>
+
+        <div class="side-section">
           <p class="section-label">Execução e fluxo</p>
           <div class="side-list">
             <div class="side-item active">
@@ -67,21 +77,28 @@
             <p class="section-label">Login</p>
             <h3>Entre para acessar o dashboard</h3>
             <p class="lede">
-              Apenas contas autenticadas entram. O painel fica oculto até o login ser concluído.
+              Apenas usuários aprovados no Supabase entram. Se você ainda não tiver conta, pode se cadastrar e
+              depois aguardar a liberação na allowlist.
             </p>
           </div>
 
           <form id="loginForm" class="login-form">
+            <div class="auth-tabs">
+              <button type="button" class="auth-tab active" data-mode="login">Entrar</button>
+              <button type="button" class="auth-tab" data-mode="signup">Cadastrar</button>
+              <button type="button" class="auth-tab" data-mode="recover">Recuperar</button>
+            </div>
+
             <label>
               <span>Email</span>
               <input type="email" name="email" autocomplete="email" placeholder="voce@empresa.com" required />
             </label>
-            <label>
+            <label data-field="password">
               <span>Senha</span>
               <input type="password" name="password" autocomplete="current-password" placeholder="••••••••" required />
             </label>
             <div class="form-actions">
-              <button type="submit" class="primary">Entrar</button>
+              <button type="submit" class="primary" id="submitButton">Entrar</button>
               <button type="button" class="secondary" id="logoutButton" hidden>Sair</button>
             </div>
             <p class="form-note" id="loginMessage">Use sua conta autorizada para acessar.</p>
@@ -89,7 +106,7 @@
         </section>
 
         <section class="dashboard" id="appShell" hidden>
-          <article class="flow-card panel">
+          <article class="panel page active" data-page="overview">
             <div class="flow-title">
               <div>
                 <p class="section-label">Fluxo simplificado</p>
@@ -111,6 +128,53 @@
                 <strong>3. Publicação</strong>
                 <p>Upload e publicação automática no horário definido.</p>
               </div>
+            </div>
+          </article>
+
+          <article class="panel page" data-page="config" hidden>
+            <div class="section-head">
+              <div>
+                <p class="section-label">Config Manager</p>
+                <h3>APIs e ambiente</h3>
+              </div>
+              <span class="ghost-badge">Seguro</span>
+            </div>
+            <div class="config-grid">
+              <div class="config-item"><span>Supabase URL</span><strong>Conectado</strong></div>
+              <div class="config-item"><span>Auth</span><strong>Email + senha</strong></div>
+              <div class="config-item"><span>Publish</span><strong>Opcional</strong></div>
+              <div class="config-item"><span>Cron</span><strong>Ativo</strong></div>
+            </div>
+          </article>
+
+          <article class="panel page" data-page="sites" hidden>
+            <div class="section-head">
+              <div>
+                <p class="section-label">Sites Manager</p>
+                <h3>Fontes para scraping</h3>
+              </div>
+              <span class="ghost-badge">4 fontes</span>
+            </div>
+            <div class="sites-list">
+              <div class="site-row"><strong>dev.to</strong><span>Tech topics</span></div>
+              <div class="site-row"><strong>Hacker News</strong><span>Tendências</span></div>
+              <div class="site-row"><strong>YouTube Trends</strong><span>Shorts ideas</span></div>
+              <div class="site-row"><strong>RSS custom</strong><span>Prioridade alta</span></div>
+            </div>
+          </article>
+
+          <article class="panel page" data-page="history" hidden>
+            <div class="section-head">
+              <div>
+                <p class="section-label">History</p>
+                <h3>Últimos envios</h3>
+              </div>
+              <span class="ghost-badge">7 dias</span>
+            </div>
+            <div class="history-list">
+              <div class="history-row"><span>Vídeo sobre IA</span><em>Publicado 10:05</em></div>
+              <div class="history-row"><span>Short de automação</span><em>Agendado 18:30</em></div>
+              <div class="history-row"><span>Conteúdo dev</span><em>Concluído 09:15</em></div>
             </div>
           </article>
 
