@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">RepasseCheck</string>
+    <string name="title_activity_main">RepasseCheck</string>
+    <string name="package_name">com.repassecheck.app</string>
+    <string name="custom_url_scheme">com.repassecheck.app</string>
+</resources>

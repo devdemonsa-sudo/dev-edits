@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844" role="img" aria-label="App RepasseCheck">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#667eea"/>
+      <stop offset="1" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="390" height="844" fill="#f6f7fb"/>
+  <rect x="18" y="20" width="54" height="54" rx="16" fill="url(#bg)"/>
+  <text x="33" y="54" fill="#fff" font-family="Segoe UI,Arial" font-size="18" font-weight="800">RC</text>
+  <text x="88" y="54" fill="#17151f" font-family="Segoe UI,Arial" font-size="22" font-weight="800">RepasseCheck</text>
+  <text x="18" y="118" fill="#764ba2" font-family="Segoe UI,Arial" font-size="12" font-weight="800">DASHBOARD</text>
+  <text x="18" y="164" fill="#17151f" font-family="Segoe UI,Arial" font-size="38" font-weight="800">Conciliacao</text>
+  <text x="18" y="204" fill="#17151f" font-family="Segoe UI,Arial" font-size="38" font-weight="800">de repasses</text>
+  <rect x="18" y="238" width="354" height="114" rx="18" fill="#fff" stroke="#e7e9f2"/>
+  <text x="42" y="286" fill="#6f7180" font-family="Segoe UI,Arial" font-size="16">Receita conciliada</text>
+  <text x="42" y="326" fill="#17151f" font-family="Segoe UI,Arial" font-size="34" font-weight="800">R$ 184.920</text>
+  <rect x="18" y="370" width="168" height="120" rx="18" fill="#fff" stroke="#e7e9f2"/>
+  <rect x="204" y="370" width="168" height="120" rx="18" fill="#fff" stroke="#e7e9f2"/>
+  <text x="42" y="420" fill="#6f7180" font-family="Segoe UI,Arial" font-size="14">Transacoes</text>
+  <text x="42" y="458" fill="#17151f" font-family="Segoe UI,Arial" font-size="30" font-weight="800">12.847</text>
+  <text x="228" y="420" fill="#6f7180" font-family="Segoe UI,Arial" font-size="14">Alertas</text>
+  <text x="228" y="458" fill="#d24545" font-family="Segoe UI,Arial" font-size="30" font-weight="800">37</text>
+  <rect x="18" y="510" width="354" height="250" rx="18" fill="#fff" stroke="#e7e9f2"/>
+  <g fill="#667eea">
+    <rect x="48" y="674" width="28" height="52" rx="14"/>
+    <rect x="96" y="636" width="28" height="90" rx="14"/>
+    <rect x="144" y="652" width="28" height="74" rx="14"/>
+    <rect x="192" y="598" width="28" height="128" rx="14"/>
+    <rect x="240" y="620" width="28" height="106" rx="14"/>
+    <rect x="288" y="580" width="28" height="146" rx="14"/>
+  </g>
+</svg>

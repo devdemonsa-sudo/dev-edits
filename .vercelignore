@@ -1,0 +1,12 @@
+.next
+node_modules
+android
+android-sdk
+samples
+tools
+cmdline-tools.zip
+jdk17.zip
+jdk21.zip
+*.log
+tmp
+temp
