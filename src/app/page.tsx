@@ -42,7 +42,7 @@ export default function HomePage() {
         <Link className="landing-brand" href="/">
           <span className="brand-mark">RC</span>
           <span>
-            <strong>RepasseCheck</strong>
+            <strong>repasscheck</strong>
             <small>conciliação inteligente</small>
           </span>
         </Link>
@@ -124,6 +124,21 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="feature-strip">
+        <article>
+          <strong>Login seguro</strong>
+          <p>Auth com JWT, refresh token e cookies protegidos.</p>
+        </article>
+        <article>
+          <strong>Controle total</strong>
+          <p>Config manager, sites manager, history e scheduler.</p>
+        </article>
+        <article>
+          <strong>Deploy Vercel</strong>
+          <p>Pronto para CI/CD com GitHub Actions e cron.</p>
+        </article>
       </section>
 
       <section className="content-grid">
