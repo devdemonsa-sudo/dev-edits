@@ -37,12 +37,15 @@ const logoRow = ["Shopify", "WooCommerce", "Amazon", "Mercado Livre", "Stripe", 
 
 export default function HomePage() {
   return (
-    <main className="landing-page">
+    <main className="landing-page premium-landing">
+      <div className="landing-backdrop landing-backdrop-one" />
+      <div className="landing-backdrop landing-backdrop-two" />
+      <div className="landing-grid-noise" />
       <header className="landing-topbar">
         <Link className="landing-brand" href="/">
           <span className="brand-mark">RC</span>
           <span>
-            <strong>repasscheck</strong>
+            <strong>RepasseCheck</strong>
             <small>conciliação inteligente</small>
           </span>
         </Link>
@@ -87,6 +90,7 @@ export default function HomePage() {
         </div>
 
         <div className="hero-panel">
+          <div className="hero-panel-ribbon">Monitoramento em tempo real</div>
           <div className="hero-panel-header">
             <span>Receita conciliada</span>
             <strong>98,7%</strong>
@@ -148,6 +152,21 @@ export default function HomePage() {
             <p>{item.text}</p>
           </article>
         ))}
+      </section>
+
+      <section className="signal-row">
+        <article className="signal-tile">
+          <span>Fluxo</span>
+          <strong>Importar → Conciliar → Exportar</strong>
+        </article>
+        <article className="signal-tile">
+          <span>Integrações</span>
+          <strong>Shopify, eBay, Stripe, PayPal</strong>
+        </article>
+        <article className="signal-tile">
+          <span>Suporte</span>
+          <strong>WhatsApp e email com prioridade</strong>
+        </article>
       </section>
 
       <section className="pricing-board" id="planos">
