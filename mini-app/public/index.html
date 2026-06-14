@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dev-edits</title>
+    <meta name="description" content="Painel visual para agendamento e automação de shorts." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="/app.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">de</div>
+          <div>
+            <p class="eyebrow">dev-edits</p>
+            <h1>Painel de Automação</h1>
+          </div>
+        </div>
+
+        <div class="side-section">
+          <p class="section-label">Execução e fluxo</p>
+          <div class="side-list">
+            <div class="side-item active">
+              <span>Próxima execução</span>
+              <strong>23:30</strong>
+            </div>
+            <div class="side-item"><span>Scraping</span><strong>12:05</strong></div>
+            <div class="side-item"><span>Roteiro</span><strong>11:15</strong></div>
+            <div class="side-item"><span>Imagem</span><strong>19:26</strong></div>
+            <div class="side-item"><span>Voz</span><strong>23:05</strong></div>
+            <div class="side-item"><span>Vídeo</span><strong>24:05</strong></div>
+            <div class="side-item"><span>Upload</span><strong>Agendar</strong></div>
+          </div>
+        </div>
+
+        <div class="side-section compact">
+          <p class="section-label">Configurações essenciais</p>
+          <div class="mini-grid">
+            <div><span>Supabase</span><strong>Conectado</strong></div>
+            <div><span>JWT</span><strong>Ativo</strong></div>
+            <div><span>Rate limit</span><strong>50/min</strong></div>
+            <div><span>Cron</span><strong>Ativo</strong></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">dev-edits • versão didática</p>
+            <h2>Plataforma de criação de vídeos para desenvolvedores</h2>
+          </div>
+          <div class="access-card" id="statusPill">Acesso restrito</div>
+        </header>
+
+        <section class="login-panel panel" id="loginCard">
+          <div>
+            <p class="section-label">Login</p>
+            <h3>Entre para acessar o dashboard</h3>
+            <p class="lede">
+              Apenas contas autenticadas entram. O painel fica oculto até o login ser concluído.
+            </p>
+          </div>
+
+          <form id="loginForm" class="login-form">
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" placeholder="voce@empresa.com" required />
+            </label>
+            <label>
+              <span>Senha</span>
+              <input type="password" name="password" autocomplete="current-password" placeholder="••••••••" required />
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="primary">Entrar</button>
+              <button type="button" class="secondary" id="logoutButton" hidden>Sair</button>
+            </div>
+            <p class="form-note" id="loginMessage">Use sua conta autorizada para acessar.</p>
+          </form>
+        </section>
+
+        <section class="dashboard" id="appShell" hidden>
+          <article class="flow-card panel">
+            <div class="flow-title">
+              <div>
+                <p class="section-label">Fluxo simplificado</p>
+                <h3>Como tudo funciona</h3>
+              </div>
+              <span class="status">Ao vivo</span>
+            </div>
+
+            <div class="flow-grid">
+              <div class="flow-step">
+                <strong>1. Planejamento</strong>
+                <p>Escolha topic, gênero e a data do vídeo.</p>
+              </div>
+              <div class="flow-step">
+                <strong>2. Geração</strong>
+                <p>Script, imagens, narração e vídeo são preparados.</p>
+              </div>
+              <div class="flow-step">
+                <strong>3. Publicação</strong>
+                <p>Upload e publicação automática no horário definido.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="stats-card panel">
+            <div class="section-head">
+              <div>
+                <p class="section-label">Métricas do fluxo</p>
+                <h3>Últimos 7 dias</h3>
+              </div>
+              <span class="ghost-badge">Atualizado agora</span>
+            </div>
+            <div class="stats-grid">
+              <div><span>Vídeos gerados</span><strong>48</strong></div>
+              <div><span>Publicações</span><strong>45</strong></div>
+              <div><span>Tempo médio</span><strong>4.8 min</strong></div>
+              <div><span>Erros</span><strong>3</strong></div>
+            </div>
+          </article>
+
+          <article class="preview-card panel">
+            <div class="section-head">
+              <div>
+                <p class="section-label">Pré-visualização</p>
+                <h3>Último short publicado</h3>
+              </div>
+              <span class="ghost-badge">YouTube</span>
+            </div>
+            <div class="video-preview">
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <div class="phone-topbar"></div>
+                  <div class="phone-content">
+                    <p>Tip to continou coding</p>
+                    <div class="play-button">▶</div>
+                  </div>
+                </div>
+              </div>
+              <div class="preview-copy">
+                <strong>Link do Shorts/Video</strong>
+                <p>https://youtu.be/aBcDeFg1234</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

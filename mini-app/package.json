@@ -1,0 +1,13 @@
+{
+  "name": "dev-edits-mini",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node -e \"console.log('static site build skipped')\"",
+    "dev": "npx serve public -l 3000",
+    "start": "npx serve public -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
